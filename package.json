@@ -11,7 +11,7 @@
     "prebuilds"
   ],
   "addon": {
-    "target": "bare-hrtime"
+    "target": "bare_hrtime"
   },
   "scripts": {
     "test": "standard && bare test.js"

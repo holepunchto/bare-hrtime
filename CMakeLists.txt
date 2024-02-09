@@ -7,7 +7,7 @@ include(bare)
 add_bare_module(bare_hrtime)
 
 target_sources(
-  bare_hrtime
+  ${bare_hrtime}
   PRIVATE
     binding.c
 )

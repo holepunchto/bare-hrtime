@@ -12,4 +12,4 @@ module.exports = exports = function hrtime (prev = EMPTY) {
   return binding.hrtime(new Uint32Array(2), prev)
 }
 
-exports.bigint = binding.bigint
+exports.bigint = binding.hrtimeBigint

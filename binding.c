@@ -44,19 +44,23 @@ bare_hrtime_bigint (js_env_t *env, js_callback_info_t *info) {
 }
 
 static js_value_t *
-init (js_env_t *env, js_value_t *exports) {
-  {
-    js_value_t *val;
-    js_create_function(env, "hrtime", -1, bare_hrtime, NULL, &val);
-    js_set_named_property(env, exports, "hrtime", val);
+bare_hrtime_exports (js_env_t *env, js_value_t *exports) {
+  int err;
+
+#define V(name, fn) \
+  { \
+    js_value_t *val; \
+    err = js_create_function(env, name, -1, fn, NULL, &val); \
+    assert(err == 0); \
+    err = js_set_named_property(env, exports, name, val); \
+    assert(err == 0); \
   }
-  {
-    js_value_t *val;
-    js_create_function(env, "hrtime", -1, bare_hrtime_bigint, NULL, &val);
-    js_set_named_property(env, exports, "bigint", val);
-  }
+
+  V("hrtime", bare_hrtime)
+  V("hrtimeBigint", bare_hrtime_bigint)
+#undef V
 
   return exports;
 }
 
-BARE_MODULE(bare_hrtime, init)
+BARE_MODULE(bare_hrtime, bare_hrtime_exports)

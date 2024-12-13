@@ -8,7 +8,7 @@ npm i bare-hrtime
 
 ## Usage
 
-``` js
+```js
 const hrtime = require('bare-hrtime')
 
 hrtime() // returns [seconds, nanoseconds]

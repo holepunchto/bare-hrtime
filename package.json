@@ -1,6 +1,6 @@
 {
   "name": "bare-hrtime",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "High-resolution timers for JavaScript",
   "exports": {
     ".": {

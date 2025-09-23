@@ -15,7 +15,7 @@ bare_hrtime(js_env_t *env, js_callback_info_t *info) {
 }
 
 static int64_t
-bare_hrtime_typed(js_value_t *receiver) {
+bare_hrtime_typed(js_value_t *receiver, js_typed_callback_info_t *info) {
   return uv_hrtime();
 }
 

@@ -19,20 +19,6 @@ hrtime.bigint() // returns nanoseconds
 
 Apache-2.0
 
-<!-- bare-refgen:api start -->
-
 ## API
 
-### Functions
-
-#### `hrtime(prev?: ArrayLike<number>): [seconds: number, nanoseconds: number]`
-
-Returns the current high-resolution time as a `[seconds, nanoseconds]` tuple. If `prev` (a previous `hrtime()` result) is given, returns the elapsed time since it instead.
-
-**Parameters**
-
-| Parameter | Type                | Default | Description                                                     |
-| --------- | ------------------- | ------- | --------------------------------------------------------------- |
-| `prev?`   | `ArrayLike<number>` | —       | A previous `hrtime()` result to compute the elapsed time since. |
-
-<!-- bare-refgen:api end -->
+See the [full API reference](https://docs.pears.com/reference/bare/modules/bare-hrtime).

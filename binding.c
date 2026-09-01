@@ -14,7 +14,7 @@ bare_hrtime(js_env_t *env, js_callback_info_t *info) {
   return result;
 }
 
-static int64_t
+static uint64_t
 bare_hrtime_typed(js_value_t *receiver, js_typed_callback_info_t *info) {
   return uv_hrtime();
 }
@@ -40,11 +40,11 @@ bare_hrtime_exports(js_env_t *env, js_value_t *exports) {
   V(
     "hrtime",
     bare_hrtime,
-    &((js_callback_signature_t) {
+    &((js_callback_signature_t){
       .version = 0,
       .result = js_biguint64,
       .args_len = 1,
-      .args = (int[]) {
+      .args = (int[]){
         js_object,
       },
     }),

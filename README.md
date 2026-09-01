@@ -15,6 +15,10 @@ hrtime() // returns [seconds, nanoseconds]
 hrtime.bigint() // returns nanoseconds
 ```
 
+## API
+
+See the [`bare-hrtime` reference](https://docs.pears.com/reference/bare/modules/bare-hrtime).
+
 ## License
 
 Apache-2.0
